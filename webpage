@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Integration Genie for Startups - Accelerate Growth with AI-Driven Tools</title>
+    <!-- Import Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3 {
+            margin: 0;
+            padding: 0;
+        }
+        p {
+            line-height: 1.6em;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #0066cc;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px 50px 20px;
+            position: relative;
+        }
+        header h1 {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        header p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+        }
+        header .subheader {
+            font-size: 1.1em;
+            margin-bottom: 50px;
+            color: #e0e0e0;
+        }
+        .cta {
+            margin-top: 20px;
+        }
+        .cta input[type="email"] {
+            padding: 15px;
+            font-size: 1em;
+            width: 280px;
+            max-width: 100%;
+            margin-right: 10px;
+            border: none;
+            border-radius: 30px;
+            outline: none;
+        }
+        .cta button {
+            padding: 15px 30px;
+            font-size: 1em;
+            background-color: #ff9900;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .cta button:hover {
+            background-color: #e68a00;
+        }
+        /* Confirmation Message */
+        #confirmation-message {
+            margin-top: 20px;
+            color: white;
+            font-weight: bold;
+            display: none;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 60px 20px;
+            position: relative;
+            background-color: #fff;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .section-title h2 {
+            font-size: 2.2em;
+            color: #0066cc;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .section-title p {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        /* Features Section */
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .feature-item {
+            flex: 1 1 45%;
+            max-width: 45%;
+            margin: 20px;
+            text-align: center;
+            padding: 20px;
+        }
+        .feature-item img {
+            width: 60px;
+            margin-bottom: 20px;
+        }
+        .feature-item h3 {
+            font-size: 1.5em;
+            color: #00509e;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        .feature-item p {
+            color: #666;
+        }
+
+        /* How It Works Section */
+        .how-it-works {
+            background-color: #f0f4f8;
+        }
+        .steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .step-item {
+            flex: 1 1 28%;
+            max-width: 28%;
+            text-align: center;
+            margin: 20px;
+            position: relative;
+            padding: 20px;
+        }
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background-color: #ff9900;
+            color: #fff;
+            border-radius: 50%;
+            display: inline-block;
+            line-height: 50px;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .step-item h3 {
+            font-size: 1.4em;
+            color: #00509e;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        .step-item p {
+            color: #555;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background-color: #fff;
+        }
+        .testimonial-item {
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            text-align: center;
+            padding: 30px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            background-color: #fafafa;
+        }
+        .testimonial-item img {
+            width: 80px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        .testimonial-item p {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        .testimonial-item h4 {
+            font-size: 1.2em;
+            color: #0066cc;
+            font-weight: 700;
+        }
+
+        /* Partners Section */
+        .partners {
+            background-color: #f0f4f8;
+            text-align: center;
+        }
+        .partners h2 {
+            margin-bottom: 40px;
+        }
+        .partners img {
+            max-width: 120px;
+            margin: 15px;
+            transition: transform 0.3s;
+        }
+        .partners img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: #fff;
+            text-align: center;
+        }
+        .contact .cta {
+            margin-top: 20px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #00509e;
+            color: #fff;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        footer a {
+            color: #ffcc00;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 800px) {
+            .feature-item, .step-item {
+                flex: 1 1 80%;
+                max-width: 80%;
+            }
+        }
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2em;
+            }
+            .feature-item, .step-item {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+            .cta input[type="email"], .cta button {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+            .cta input[type="email"] {
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Integration Genie for Startups: Accelerate Your Growth with AI-Powered Solutions</h1>
+    <p class="subheader">Easily find the tools you need with AI-powered recommendations</p>
+    <p>We help startups like yours navigate the complex world of digital tools—recommending the best solutions to scale efficiently.</p>
+    <div class="cta">
+        <form id="getform" action="https://getform.io/f/bkkkgoob" method="POST">
+            <input type="email" name="email" id="emailInput" placeholder="Enter your email" required>
+            <button type="submit">Get Started with AI</button>
+        </form>
+        <p id="confirmation-message">Thank you for subscribing!</p>
+    </div>
+</header>
+<section class="features">
+    <div class="section-title">
+        <h2>Why Integration Genie?</h2>
+        <p>Accelerate your startup's growth with AI that simplifies tool selection and integration.</p>
+    </div>
+    <div class="features">
+        <div class="feature-item">
+            <img src="https://github.com/jadnaf/app/blob/main/growtika-nGoCBxiaRO0-unsplash%20(1).jpg?raw=true" alt="AI Insights" style="width: 500px; max-width: 100%; height: auto; margin-bottom: 20px;">
+            <h3>AI-Powered Recommendations</h3>
+            <p>Our AI analyzes your startup's needs and recommends tools that will seamlessly integrate with your current systems.</p>
+        </div>
+        <div class="feature-item">
+            <img src="https://github.com/jadnaf/app/blob/main/andrew-neel-ADjcacMLblo-unsplash.jpg?raw=true" alt="Client Success" style="width: 425px; max-width: 100%; height: auto; margin-bottom: 20px;">
+            <h3>Simple and Easy to Use</h3>
+            <p>No need to be a tech expert. Integration Genie provides clear, actionable recommendations, so you can focus on what matters—growing your startup.</p>
+        </div>
+    </div>
+</section>
+<section class="how-it-works">
+    <div class="section-title">
+        <h2>How Our AI Empowers Startups</h2>
+    </div>
+    <div class="steps">
+        <div class="step-item">
+            <div class="step-number">1</div>
+            <h3>Share Your Digital Setup</h3>
+            <p>List the tools you're using and what you want to achieve with your digital presence.</p>
+        </div>
+        <div class="step-item">
+            <div class="step-number">2</div>
+            <h3>Receive AI-Driven Suggestions</h3>
+            <p>Our AI will recommend the most effective tools for your startup—tools that work together seamlessly.</p>
+        </div>
+        <div class="step-item">
+            <div class="step-number">3</div>
+            <h3>Implement and Grow</h3>
+            <p>With the right tools in place, watch your startup grow effortlessly.</p>
+        </div>
+    </div>
+</section>
+<footer>
+    <p>Questions? We're here to help: <a href="mailto:integrationgenie@gmail.com">integrationgenie@gmail.com</a></p>
+    <p><em>Easy. Friendly. Powerful.</em></p>
+</footer>
+<!-- JavaScript to handle form submission -->
+<script>
+    document.getElementById("confirmation-message").style.display = "none";
+
+    document.getElementById("getform").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        var form = event.target;
+        var data = new FormData(form);
+
+        fetch(form.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(function(response) {
+            if (response.ok) {
+                document.getElementById("confirmation-message").style.display = "block";
+                form.reset();
+            } else {
+                alert("There was an issue with your submission. Please try again.");
+            }
+        }).catch(function(error) {
+            alert("Oops! There was a problem submitting your form.");
+        });
+    });
+</script>
+</body>
+</html>
